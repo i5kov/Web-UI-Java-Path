@@ -14,7 +14,6 @@ public class RollDieGame {
         for (int i = 1; i <= dieRolls; i++) {
             int die = random.nextInt(6) + 1;
             currentSpace += die;
-            int neededSpaces = gameBoardSpaces - currentSpace;
             System.out.print(String.format("Roll #%d: You've rolled a %d. ", i, die));
 
             if (currentSpace == gameBoardSpaces) {
