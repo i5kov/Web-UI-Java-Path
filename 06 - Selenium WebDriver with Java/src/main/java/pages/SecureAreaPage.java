@@ -3,13 +3,12 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SecureAreaPage {
+public class SecureAreaPage extends BasePage {
 
-    private WebDriver driver;
-    private By messageAfterLogin = By.id("flash");
+    private final By messageAfterLogin = By.id("flash");
 
     public SecureAreaPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public String getMessageAfterLogin() {

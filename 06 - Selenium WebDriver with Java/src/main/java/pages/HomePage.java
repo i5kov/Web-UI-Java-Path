@@ -1,19 +1,15 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage {
-
-    private WebDriver driver;
-    private By formAuthenticationLink = By.linkText("Form Authentication");
+public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public LoginPage clickFormAuthenticationLink() {
-        driver.findElement(formAuthenticationLink).click();
+        findElementAndClick("Form Authentication");
         return new LoginPage(driver);
     }
 
