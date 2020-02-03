@@ -11,7 +11,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void testSuccessfulLogin() {
-        LoginPage loginPage = homePage.clickFormAuthenticaionLink();
+        LoginPage loginPage = homePage.clickFormAuthenticationLink();
         loginPage.fillUsernameField("tomsmith");
         loginPage.fillPasswordField("SuperSecretPassword!");
         SecureAreaPage secureAreaPage = loginPage.clickLoginButton();
@@ -21,7 +21,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void testLoginWithoutPassword() {
-        LoginPage loginPage = homePage.clickFormAuthenticaionLink();
+        LoginPage loginPage = homePage.clickFormAuthenticationLink();
         loginPage.fillUsernameField("tomsmith");
         loginPage.clickLoginButton();
         assertTrue(loginPage.getErrorMessageText().contains("password is invalid!"),
@@ -30,7 +30,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void testLoginWithoutUsername() {
-        LoginPage loginPage = homePage.clickFormAuthenticaionLink();
+        LoginPage loginPage = homePage.clickFormAuthenticationLink();
         loginPage.fillPasswordField("SuperSecretPassword!");
         loginPage.clickLoginButton();
         assertTrue(loginPage.getErrorMessageText().contains("username is invalid!"),

@@ -12,7 +12,7 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public LoginPage clickFormAuthenticaionLink() {
+    public LoginPage clickFormAuthenticationLink() {
         driver.findElement(formAuthenticationLink).click();
         return new LoginPage(driver);
     }
