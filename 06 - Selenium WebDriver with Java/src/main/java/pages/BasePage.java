@@ -23,7 +23,7 @@ public class BasePage {
     protected void findElementAndEnterTextInIt(By selector, String textToBeEntered) {
         driver.findElement(selector).sendKeys(textToBeEntered);
     }
-
+    
     protected Select findDropdownElement(By selector) {
         return new Select(driver.findElement(selector));
     }
@@ -31,4 +31,5 @@ public class BasePage {
     protected String getPageHeader(By selector) {
         return driver.findElement(selector).getText();
     }
+
 }
