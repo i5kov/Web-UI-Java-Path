@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class BasePage {
 
@@ -11,17 +12,23 @@ public class BasePage {
         this.driver = driver;
     }
 
-    public void findElementAndClick(String linkText) {
+    protected void findElementAndClick(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
     }
 
-    public void findElementAndClick(By selector) {
+    protected void findElementAndClick(By selector) {
         driver.findElement(selector).click();
     }
 
-    public void findElementAndEnterTextInIt(By selector, String textToBeEntered) {
+    protected void findElementAndEnterTextInIt(By selector, String textToBeEntered) {
         driver.findElement(selector).sendKeys(textToBeEntered);
     }
 
+    protected String getPageHeader(By selector) {
+        return driver.findElement(selector).getText();
+    }
 
+    protected Select findDropdownElement(By selector) {
+        return new Select(driver.findElement(selector));
+    }
 }

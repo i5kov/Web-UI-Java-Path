@@ -13,4 +13,19 @@ public class HomePage extends BasePage {
         return new LoginPage(driver);
     }
 
+    public DropdownPage clickDropdownLink() {
+        findElementAndClick("Dropdown");
+        return new DropdownPage(driver);
+    }
+
+    public ForgotPasswordPage clickForgotPasswordLink() {
+        findElementAndClick("Forgot Password");
+        return new ForgotPasswordPage(driver);
+    }
+
+    public HorizontalSliderPage clickHorizontalSliderLink() {
+        findElementAndClick("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
+
 }
