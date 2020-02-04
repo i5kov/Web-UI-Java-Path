@@ -23,12 +23,14 @@ public class HomePage extends BasePage {
         return new ForgotPasswordPage(driver);
     }
 
-<<<<<<< HEAD
     public HorizontalSliderPage clickHorizontalSliderLink() {
         findElementAndClick("Horizontal Slider");
         return new HorizontalSliderPage(driver);
     }
 
-=======
->>>>>>> 8eeb8c64271eb9df60b164f1d02c8e095e0a899b
+    public AlertsPage clickJavaScriptAlertsLink() {
+        findElementAndClick("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
+
 }
