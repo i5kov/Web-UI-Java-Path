@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class EmailSentPage extends BasePage {
 
-    private By emailSentMessage = By.id("content");
+    private final By emailSentMessage = By.id("content");
 
     public EmailSentPage(WebDriver driver) {
         super(driver);

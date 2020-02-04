@@ -4,13 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-import java.security.Key;
-
 public class HorizontalSliderPage extends BasePage {
 
-    private By mainHeaderPage   = By.cssSelector(".example > h3");
-    private By slider           = By.cssSelector("input[type='range']");
-    private By range            = By.id("range");
+    private final By mainHeaderPage   = By.cssSelector(".example > h3");
+    private final By slider           = By.cssSelector("input[type='range']");
+    private final By range            = By.id("range");
 
     public HorizontalSliderPage(WebDriver driver) {
         super(driver);

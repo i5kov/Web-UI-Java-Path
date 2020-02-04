@@ -3,14 +3,14 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class DropdownPage extends BasePage {
 
-    private By dropdownField = By.id("dropdown");
+    private final By dropdownField = By.id("dropdown");
 
     public DropdownPage(WebDriver driver) {
         super(driver);
