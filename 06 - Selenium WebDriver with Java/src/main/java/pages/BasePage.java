@@ -24,11 +24,11 @@ public class BasePage {
         driver.findElement(selector).sendKeys(textToBeEntered);
     }
 
-    protected String getPageHeader(By selector) {
-        return driver.findElement(selector).getText();
-    }
-
     protected Select findDropdownElement(By selector) {
         return new Select(driver.findElement(selector));
+    }
+
+    protected String getPageHeader(By selector) {
+        return driver.findElement(selector).getText();
     }
 }
