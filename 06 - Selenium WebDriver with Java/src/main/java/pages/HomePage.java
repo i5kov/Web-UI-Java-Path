@@ -33,4 +33,9 @@ public class HomePage extends BasePage {
         return new AlertsPage(driver);
     }
 
+    public FileUploaderPage clickFileUploadLink() {
+        findElementAndClick("File Upload");
+        return new FileUploaderPage(driver);
+    }
+
 }
