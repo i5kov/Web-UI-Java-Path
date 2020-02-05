@@ -38,4 +38,9 @@ public class HomePage extends BasePage {
         return new FileUploaderPage(driver);
     }
 
+    public FramesPage clickFramesLink() {
+        findElementAndClick("Frames");
+        return new FramesPage(driver);
+    }
+
 }
