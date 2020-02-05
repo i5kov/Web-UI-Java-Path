@@ -43,4 +43,9 @@ public class HomePage extends BasePage {
         return new FramesPage(driver);
     }
 
+    public DynamicLoadingPage clickDynamicLoadingLink() {
+        findElementAndClick("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
+    }
+
 }
